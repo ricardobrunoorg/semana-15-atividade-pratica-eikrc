@@ -54,3 +54,92 @@ h4 {
 main {
     padding: 20px;
 }
+
+/* ---- Catálogo de filmes / cards ---- */
+
+.cards-filmes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.2em;
+    margin-top: 1em;
+}
+
+.lista-vazia {
+    color: #666;
+}
+
+.card-filme {
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card-filme.favoritado {
+    border-color: #ff7645;
+    box-shadow: 0 0 0 2px rgba(255, 118, 69, 0.35);
+}
+
+.card-filme-poster {
+    position: relative;
+}
+
+.card-filme-poster img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+.btn-favoritar {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 2.2em;
+    height: 2.2em;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #ff7645;
+    font-size: 1.2em;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-favoritar.favoritado {
+    background: #ff7645;
+    color: #fff;
+}
+
+.card-filme-info {
+    padding: 0.8em 1em;
+}
+
+.card-filme-info h4 {
+    margin: 0 0 0.2em 0;
+}
+
+.card-filme-meta {
+    font-size: 0.85em;
+    color: #666;
+    margin: 0 0 0.5em 0;
+}
+
+.card-filme-sinopse {
+    font-size: 0.9em;
+    color: #333;
+    margin: 0;
+}
+
+.aviso-login {
+    background: #fff3ea;
+    border: 1px solid #ff7645;
+    border-radius: 6px;
+    padding: 1em;
+    margin: 1em 0;
+}

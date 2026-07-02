@@ -24,6 +24,14 @@
 
         function initPage() {
 
+            // Esta página é um EXEMPLO de página protegida: só pode ser
+            // acessada por um usuário logado. Caso contrário, redireciona
+            // para a tela de login.
+            if (!isLoggedIn()) {
+                window.location.href = LOGIN_URL;
+                return;
+            }
+
             // Associa a função de logout ao botão
             document.getElementById('btn_logout').addEventListener('click', logoutUser);
 

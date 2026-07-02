@@ -15,11 +15,67 @@
       "email": "user@abc.com"
     },
     {
+      "id": 3,
       "login": "rommel",
       "senha": "123",
       "nome": "Rommel",
-      "email": "rommel@gmail.com",
-      "id": 3
+      "email": "rommel@gmail.com"
+    }
+  ],
+  "filmes": [
+    {
+      "id": 1,
+      "titulo": "Além das Estrelas",
+      "genero": "Ficção Científica",
+      "ano": 2019,
+      "nota": 8.7,
+      "sinopse": "Uma tripulação espacial precisa decidir entre voltar para casa ou seguir em frente rumo ao desconhecido.",
+      "imagem": "https://placehold.co/300x445/1b2a4a/ffffff?text=Al%C3%A9m+das+Estrelas"
+    },
+    {
+      "id": 2,
+      "titulo": "Segredos da Cidade Velha",
+      "genero": "Suspense",
+      "ano": 2021,
+      "nota": 7.9,
+      "sinopse": "Um detetive investiga uma série de desaparecimentos ligados a um antigo bairro esquecido pelo tempo.",
+      "imagem": "https://placehold.co/300x445/4a1b1b/ffffff?text=Segredos+da+Cidade+Velha"
+    },
+    {
+      "id": 3,
+      "titulo": "Risadas em Família",
+      "genero": "Comédia",
+      "ano": 2018,
+      "nota": 7.2,
+      "sinopse": "Uma família desorganizada tenta sobreviver a um final de semana de reencontro cheio de confusões.",
+      "imagem": "https://placehold.co/300x445/4a3d1b/ffffff?text=Risadas+em+Fam%C3%ADlia"
+    },
+    {
+      "id": 4,
+      "titulo": "Coração de Aço",
+      "genero": "Ação",
+      "ano": 2022,
+      "nota": 8.1,
+      "sinopse": "Um ex-soldado retorna à ativa para proteger sua cidade de uma organização criminosa poderosa.",
+      "imagem": "https://placehold.co/300x445/1b4a2a/ffffff?text=Cora%C3%A7%C3%A3o+de+A%C3%A7o"
+    },
+    {
+      "id": 5,
+      "titulo": "O Último Verão",
+      "genero": "Drama",
+      "ano": 2020,
+      "nota": 8.9,
+      "sinopse": "Dois amigos de infância revivem memórias enquanto enfrentam decisões que vão mudar seus rumos.",
+      "imagem": "https://placehold.co/300x445/2a1b4a/ffffff?text=O+%C3%9Altimo+Ver%C3%A3o"
+    },
+    {
+      "id": 6,
+      "titulo": "Reino Encantado",
+      "genero": "Fantasia",
+      "ano": 2023,
+      "nota": 8.4,
+      "sinopse": "Uma jovem descobre um portal para um reino mágico e precisa salvá-lo de uma antiga maldição.",
+      "imagem": "https://placehold.co/300x445/4a1b3d/ffffff?text=Reino+Encantado"
     }
   ]
 }

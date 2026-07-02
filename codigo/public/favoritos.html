@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineCatálogo | Meus Favoritos</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/js/login.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="banner">
+        <img src="./assets/images/banner_ti.png" alt="" />
+      </div>
+      <div class="barra-info">
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="favoritos.html">Meus Favoritos</a></li>
+            <li><a href="about.html">Sobre nós</a></li>
+          </ul>
+        </nav>
+        <div class="dados-usuario">
+          <span id="userInfo"></span>
+        </div>
+      </div>
+    </header>
+    <main>
+        <h3>Meus Favoritos</h3>
+
+        <div id="aviso-login" class="aviso-login" style="display:none;">
+            <p>Você precisa estar logado para ver seus favoritos.
+            <a href="/modulos/login/login.html">Clique aqui para entrar</a>.</p>
+        </div>
+
+        <div id="cards-filmes" class="cards-filmes"></div>
+    </main>
+
+    <script src="./assets/js/favoritos.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script>
+        function carregarMeusFavoritos() {
+            if (!isLoggedIn()) {
+                document.getElementById('aviso-login').style.display = 'block';
+                document.getElementById('cards-filmes').style.display = 'none';
+                return;
+            }
+
+            let idsFavoritos = getFavoritos();
+
+            fetch('/filmes')
+                .then(response => response.json())
+                .then(filmes => {
+                    let favoritados = filmes.filter(f => idsFavoritos.includes(f.id));
+                    renderizarFilmes(favoritados, 'cards-filmes');
+
+                    if (favoritados.length === 0) {
+                        document.getElementById('cards-filmes').innerHTML =
+                            '<p class="lista-vazia">Você ainda não marcou nenhum filme como favorito. ' +
+                            '<a href="index.html">Volte para o catálogo</a> e clique na estrela ☆ de um card.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar filmes via API JSONServer:', error);
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', carregarMeusFavoritos);
+    </script>
+</body>
+</html>
