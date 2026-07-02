@@ -6,8 +6,8 @@ Nesta atividade, vamos integrar ao projeto o módulo de login, cujo código já 
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
+- Nome: Erick Calixto
+- Matricula: 
 
 
 **Print da tela com a implementação**
