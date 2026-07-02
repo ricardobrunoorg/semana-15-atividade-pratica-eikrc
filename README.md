@@ -7,7 +7,7 @@ Nesta atividade, vamos integrar ao projeto o módulo de login, cujo código já 
 ## Informações do trabalho
 
 - Nome: Erick Calixto
-- Matricula: 
+- Matricula: 924090
 
 
 **Print da tela com a implementação**
@@ -19,5 +19,5 @@ Foi implementado um catálogo de filmes/séries na home-page (`codigo/public/ind
 - **Persistência por usuário**: os favoritos são salvos no `localStorage` com a chave `favoritos_<idDoUsuario>`, contendo um array de ids (ex.: `[1, 4]`). Isso garante que os favoritos continuem valendo após recarregar a página ou reabrir o navegador para aquele usuário.
 - **Página "Meus Favoritos"** (`codigo/public/favoritos.html`): lista somente os filmes favoritados pelo usuário logado; se ninguém estiver logado, exibe um aviso com link para a tela de login.
 
-<<  COLOQUE A IMAGEM TELA 1 AQUI (Mostrando seu marcador de favoritos)>>
-<<  COLOQUE A IMAGEM TELA 2 AQUI >>
+![alt text](image-1.png)
+![alt text](image.png)
